@@ -3,35 +3,16 @@ import './contact.css';
 
 const Contact = () => {
 
-  const [From, setFrom] = useState({});
+  const [form, setFrom] = useState({});
 
    const fromHandler=(e)=>{
-    setFrom({...From,[e.target.name]:e.target.value})
-   }
+    setFrom({...form,[e.target.name]:e.target.value})
+   };
 
- const sendEmail=(e)=>{
+ const handleMessage=(e)=>{
  e.preventDefault();
-    const config= {
-        // Username : "abu.sayed121@yahoo.com",
-        // Password : "956751E6920D0298273211AC41F1A04F1590",
-        // Host : "smtp.elasticemail.com",
-        // Port: 2525,
-        SecureToken : "c85a12a3-6855-4e5e-b0c5-34bf438e4f42",
-        To : 'abu.sayed121@yahoo.com',
-        From : From.email,
-        Subject : From.subject,
-        Body : `
-        Name:${From.name},
-        Email:${From.email},
-        Telegram:${From.telegram},
-        The_Message:${From.message}
-        `
-      }
-
-    if (window.Email) {
-        window.Email.send(config).then(()=>{alert('The messsage was send')})
-    }
- }
+   console.log(form);
+ };
 
 
     return (
@@ -51,7 +32,7 @@ const Contact = () => {
 
                 <div className="contactFrom">
                     <h3 className='cntcHdr'> <span>C</span>ontact From</h3><hr />
-                    <form onSubmit={sendEmail}   className="FromC">
+                    <form onSubmit={handleMessage}   className="FromC">
                     {/* <input type="hidden" name="_captcha" value="false" />
                      <input type="hidden" name="_subject" value="New submission!" /> */}
                      {/* <input type="hidden" name="_template" value="table"/> */}
