@@ -1,0 +1,137 @@
+.contact .cntcHdr{
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family:monospace;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.cntcHdr span{
+color: gold;
+border-radius: 10rem;
+box-shadow: 0 .3rem .3rem .3rem rgba(255, 217, 0, 0.717);background: none;
+}
+
+.myDetail{
+    display: flex;
+    justify-content: center;
+}
+
+.adres, .phone{
+    margin: .2rem;
+}
+
+.FromC{
+    text-align: center;
+}
+.namEmail{
+width: 100%;
+display: flex;
+/* padding: 1rem; */
+justify-content: center;
+}
+
+.namEmail input{
+    width: 40%;
+    height: 3rem;
+    margin: .3rem;
+    border: none;
+    border-bottom: 1px solid rgba(225, 219, 212, 0.501);
+    background: none;
+    font-size: 1rem;
+    font-family: monospace;
+    font-weight: 600;
+    color: #008080;
+ }
+
+#teleId{
+    width: 83%;
+    height: 3rem;
+    margin: .5rem;
+    border: none;
+    border-bottom: 1px solid rgba(225, 219, 212, 0.501);
+    background: none;
+    font-size: 1rem;
+    font-family: monospace;
+    font-weight: 600;
+    color: #008080;
+}
+
+
+#subject{
+    width: 83%;
+    height: 3rem;
+    margin: .5rem;
+    border: none;
+    border-bottom: 1px solid rgba(225, 219, 212, 0.501);
+    background: none; 
+    font-size: 1rem;
+    font-family: monospace;
+    font-weight: 600;
+    color: #008080;
+}
+
+#message{
+    width: 83%;
+    height: 18rem;
+    margin: .5rem;
+    border: none;
+    border-bottom: 1px solid rgba(225, 219, 212, 0.501);
+    background: none;
+    resize: none; 
+    font-size: 1.1rem;
+    font-family: monospace;
+    color: #008080;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 1px solid aqua;
+}
+
+#subject:focus{
+    outline: none;
+    border-bottom: 1px solid aqua;
+}
+
+#message:focus{
+    outline: none;
+    border-bottom: 1px solid aqua;
+}
+
+#teleId:focus{
+    outline: none;
+    border-bottom: 1px solid aqua;
+}
+
+.Fbtn button{
+    border: none;
+    background-color: dodgerblue;
+    padding: .5rem 1rem;
+    border-radius: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.Fbtn button:hover{
+    background-color: rgb(255, 255, 255);
+}
+.Fbtn{
+    padding: 1rem;
+}
+
+@media screen and (max-width:600px) {
+    .myDetail{
+        flex-direction: column;
+    }
+
+    .namEmail{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .namEmail input{
+        width: 83%;
+     }
+    
+}

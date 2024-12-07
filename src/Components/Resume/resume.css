@@ -1,0 +1,277 @@
+.resume .resumeHdr{
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family:monospace;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.resumeHdr span{
+color: gold;
+border-radius: 10rem;
+box-shadow: 0 .3rem .3rem .3rem rgba(255, 217, 0, 0.717);background: none;
+}
+
+
+.eduExp{
+    display: flex;flex-direction: column-reverse;
+    justify-content: center;
+    padding: 1rem; 
+}
+
+.ExIcon,
+.EdIcon{
+    font-size: 2rem;
+    border: 2px solid gold;
+    padding: .8rem 1rem ;
+    border-radius: 50%;
+    color: gold;
+    margin: 2rem 0;
+}
+
+
+.experience span:nth-child(2){
+    font-size: 1.1rem;
+    font-weight: bold;margin: 1rem;
+}
+
+.education span:nth-child(2){
+font-size: 1.1rem;
+font-weight: bold;margin: 1rem;
+}
+
+.ex1{
+    border-left: 2px solid mediumaquamarine;
+    margin: 2rem;
+    padding: 1rem;
+    position: relative;
+   
+}
+
+.ex1::before{
+    position: absolute;
+    content: '';
+    top: 1rem;
+    left: -.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: mediumaquamarine;
+    border-radius: 1rem;
+}
+
+
+.ex1 span{
+    border: 1px solid gold ;
+    padding: .1rem .3rem;
+    color: gold;
+    margin: 1rem 0;
+}
+
+.ex1 i, p{
+    font-size: 1rem;
+    font-family: monospace;
+    opacity: .8;
+    margin: .3rem;
+}
+.ex1 i{
+    position: relative;
+    top: -1rem;
+}
+
+.ex1 button{
+    background: none;
+    border: none;font-size: 1rem;
+    color: gold;
+    font-weight: 700;font-family: monospace;
+}
+.title{
+    display: flex;flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.title img{
+    width: 5rem;
+}
+
+
+
+
+.edu1{
+    border-left: 2px solid mediumaquamarine;
+    margin: 2rem;
+    padding: 1rem;
+    position: relative;
+   
+}
+
+.edu1::before{
+    position: absolute;
+    content: '';
+    top: 1rem;
+    left: -.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: mediumaquamarine;
+    border-radius: 1rem;
+}
+
+.edu1 span{
+    border: 1px solid gold ;
+    padding: .1rem .3rem;
+    color: gold;
+}
+
+.edu1  p{
+    font-size: 1rem;
+    font-family: monospace;
+    opacity: .8;
+    margin: .6rem;
+}
+
+.edu1 h2,h3,h4{
+    margin: .3rem;
+}
+.edu1 h2{
+    color: teal;
+    font-size: 1.1rem;
+    font-family: monospace;
+}
+.edu1 button{
+    background: none;
+    border: none;font-size: 1rem;
+    color: gold;
+    font-weight: 700;font-family: monospace;
+}
+
+.skillCont{
+    display: flex;justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* background-color: aliceblue; */
+}
+
+.skill1,
+.skill2{
+    display: flex;justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.code,.knowleg{
+    width: 100%;
+}
+
+.codeHdr{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.codeCont,
+.knowCont{
+    padding: 1rem;
+}
+
+.codeHdr span{
+    font-size: 1.6rem;
+    border: 2px solid gold;
+    padding: .5rem .7rem ;
+    border-radius: 50%;
+    color: gold;
+
+}
+
+
+
+.cercle1, .cercle2, .cercle3, .cercle4,.cercle5, .cercle6, .cercle7, .cercle8{
+    width:  100%;
+    height: .5rem;
+    background-color: aliceblue;
+    border-radius: 1rem;
+    color: aquamarine;
+    margin: 1rem;
+    display: flex;
+    padding: 0;
+}
+.cercle1 span{
+    height: 100%;
+    width: 80%;
+    border-radius: 1rem;
+    background-color: rgb(13, 84, 109);
+}
+.cercle2 span{
+    height: 100%;
+    width: 75%;
+    border-radius: 1rem;
+    background-color: rgb(13, 84, 109);
+}
+.cercle3 span{
+    height: 100%;
+    width: 70%;
+    border-radius: 1rem;
+    background-color: rgb(13, 84, 109);
+}
+.cercle4 span{
+    height: 100%;
+    width: 86%;
+    border-radius: 1rem;
+    background-color: rgb(13, 84, 109);
+}
+
+.cercle5 span{
+    height: 100%;
+    width: 73%;
+    border-radius: 1rem;
+    background-color: rgb(13, 84, 109);
+}
+.cercle6 span{
+    height: 100%;
+    width: 66%;
+    border-radius: 1rem;
+    background-color: rgb(13, 84, 109);
+}
+.cercle7 span{
+    height: 100%;
+    width: 60%;
+    border-radius: 1rem;
+    background-color: rgb(13, 84, 109);
+}
+
+.H1{
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family:monospace;
+    margin: 1rem;
+    color: rgb(255, 197, 51);
+}
+.knowleg p{
+margin: 1rem;
+font-size: 1.1rem;
+font-family: monospace;
+}
+
+.knowleg p .kIco{
+color: rgb(255, 251, 0);
+}
+
+
+
+@media screen and (max-width:580px){
+    .eduExp{
+        display: flex;flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem; 
+    }
+
+    .skillCont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}

@@ -1,0 +1,67 @@
+
+/* .teams{
+    background-color: aliceblue;
+} */
+
+.teams .teamHdr{
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family:monospace;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.teamHdr span{
+color: gold;
+border-radius: 10rem;
+box-shadow: 0 .3rem .3rem .3rem rgba(255, 217, 0, 0.717);background: none;
+}
+
+.teamCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.member{
+    width: 17rem;
+    background: rgba(0, 0, 0, 0.863);
+    margin: .5rem;
+    border-radius: .6rem;
+    text-align: center;
+    padding: .5rem;
+}
+.member:hover{
+  background-color: rgb(10, 114, 174)
+}
+
+.member img{
+    width: 30%;
+    height: 7rem;
+    border-radius: 50%;
+    
+}
+
+.member h3{
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+.member h4{
+    font-size: .9rem;
+    font-style: italic;
+    color: rgb(255, 1, 196);
+    font-stretch: ultra-condensed;
+
+}
+
+.teamLink{
+    font-size: 1.2rem;
+    margin: 1rem;
+    text-decoration: none;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+

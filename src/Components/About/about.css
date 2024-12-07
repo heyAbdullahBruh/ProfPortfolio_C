@@ -1,0 +1,75 @@
+
+.about .aboutHdr{
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family:monospace;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.aboutHdr span{
+color: gold;
+border-radius: 10rem;
+box-shadow: 0 .3rem .3rem .3rem rgba(255, 217, 0, 0.717);background: none;
+}
+
+.myDsc{
+    padding: 2rem;
+}
+.myDsc p ,h3{
+    font-family: monospace;
+}
+.myDsc p{
+    font-size: 1rem;
+}
+.dsc2{
+    display: flex;justify-content: center;flex-wrap: wrap;
+}
+.child:nth-child(2){
+    margin: 0 0 0 2rem;
+}
+
+.service1{
+    display: flex;
+    justify-content: center;align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.servChild{
+    width: 15rem;
+    height: 10rem;
+    padding: 1rem;
+    border: .1px solid rgb(149, 149, 137);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: .5rem;
+}
+.servChild p{
+    font-size: 1rem;
+    font-family: monospace;
+    opacity: .8;
+}
+.servChild span{
+    font-size: 2rem;
+    border: 1px solid gold;
+    padding: .6rem 1rem ;
+    border-radius: 50%;
+    color: gold;
+}
+
+
+/* 
+@media screen and (max-width:510px) {
+    .service1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;align-items: center;
+        flex-wrap: wrap;
+    }
+} */
+
+
+

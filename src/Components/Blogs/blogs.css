@@ -1,0 +1,91 @@
+
+
+.blogheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blogheader .blogHdr{
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family:monospace;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.blogHdr span{
+color: gold;
+border-radius: 10rem;
+box-shadow: 0 .3rem .3rem .3rem rgba(255, 217, 0, 0.717);background: none;
+}
+
+
+.blogNav{
+    padding: .5rem;
+}
+
+.blogNav button{
+ background: none;
+ color: rgb(248, 179, 4);
+ font-weight: bold;
+ font-family: monospace;
+ font-size: 1rem;
+}
+
+.blogCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.all, .travel, .motiv, .art, .code{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.travel, .motiv, .art, .code{
+    display: none;
+}
+
+.blogSec{
+    padding:.3rem; 
+    margin: .5rem;
+    text-align: center;
+    border: 1px solid slateblue;
+}
+
+.blogSec img{
+    width: 90%;
+}
+
+.seeMore{
+    color: rgb(237, 232, 100);
+}
+
+.blogSec h3{
+    font-size: 1.1rem;
+}
+.blogSec p{
+    font-size: 1rem;
+}
+
+@media screen and (max-width:700px) {
+    .all, .travel, .motiv, .art{
+        grid-template-columns:  auto;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .blogheader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
