@@ -1,11 +1,11 @@
-import React from 'react';
-import './blogD.css'
-import { useParams } from 'react-router';
-import blogData from '../../app/blogData';
-import { Link } from 'react-router-dom';
-const BlogDetail = () => {
+"use client";
 
-    const{blogId}=useParams();
+import Link from 'next/link';
+import './blogD.css'
+import blogData from '@/db/blogData';
+
+const BlogDetail = ({blogId}) => {
+
 
     const detaiBlog= blogData.find(bD=> bD.id ===blogId);
     const{id,uID,image,title,body}=detaiBlog;
@@ -15,13 +15,13 @@ const BlogDetail = () => {
 
     return (
         <div className='detaiBlog'>
-            <div className="blogheader">
-                <Link to={'/blog'}><button className='wrkBtn'>Close</button></Link>
+            <div className="blogDheader">
+                <Link href={'/blog'}><button>Close</button></Link>
             </div><hr />
                 <div className="detailBSec">
                     <img src={image} alt={id} />
                     <h3>  {title}  </h3>
-                    <p> {body}{body}</p>
+                    <p> {body}</p>
                 </div>
                 <h1>Related Blogs...{'>'}</h1>
                 <div className="relateB" >
@@ -33,7 +33,7 @@ const BlogDetail = () => {
                                 <section key={blog.id} className='blogSec' >
                                     <img src={image} alt="all" />
                                     <h3 >{title}</h3>
-                                    <p >{bodySl}....<Link to={`/blogDetail/${blog.id}`} className='seeMore'>See Detail </Link></p>
+                                    <p >{bodySl}....<Link href={`/blogDetail/${blog.id}`} className='seeMore'>See Detail </Link></p>
                                     
                                 </section>
                             )

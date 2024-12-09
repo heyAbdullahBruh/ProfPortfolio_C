@@ -6,14 +6,13 @@
 }
 
 /* *{
-  margin: 0 ;
-  padding: 0 ;
   box-sizing: border-box;
-  outline: none;
 } */
+
  body{
   scroll-behavior: smooth;
-
+  margin: 0 ;
+  padding: 0 ;
  }
 .App{
   margin: 0;
@@ -27,10 +26,14 @@ h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
   font-family: var(--headingFontFamily);
 }
 
-p ,li ,a ,td ,strong ,button{
+p ,li ,a ,td ,strong ,button, b, strong, span{
   font-family: var(--descFontFamily);
 }
-
+button{
+    padding: .3rem .6rem;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
 nav{
   width: 50%;
   max-height: 90vh;
@@ -85,7 +88,7 @@ main{
 
   .App{
       padding: 0; 
-      overflow: scroll;
+      overflow: hidden;
   }
   main{
       width: 100%;        

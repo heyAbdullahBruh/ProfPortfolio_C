@@ -1,9 +1,9 @@
-import Resume from "@/Components/Resume/Resume";
+import Bolgs from "@/Components/Blogs/Bolgs";
 
 const page = () => {
     return (
         <>
-            <Resume/>
+          <Bolgs/>
         </>
     );
 };

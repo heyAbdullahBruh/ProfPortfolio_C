@@ -1,20 +1,18 @@
-import React from 'react';
+"use client;"
 import './workDetails.css';
-import { useParams } from 'react-router';
-import { workData } from '../../app/workData';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import { workData } from '@/db/workData';
 
-const WorkDetails = () => {
+const WorkDetails = ({workId}) => {
 
-    const {workId}=useParams();
     const detail= workData.find(wrk => wrk.id===workId);
     const {thumb,imgs,title,dsc}=detail;
     // console.log(detail);
     return (
         <div className='workDetail'>
            <div className="wrkTop">
-           <h3 className='workHdr'> <span>P</span>rojects Details</h3>
-           <Link to="/work"><button className='wrkBtn'>Close</button></Link>
+                <h3 className='workHdr'> <span>P</span>rojects Details</h3>
+                <Link href="/work"><button>Close</button></Link>
            </div><hr />
             <div className="workDSec">
                 <h3>{title}</h3>
@@ -27,12 +25,12 @@ const WorkDetails = () => {
                     <h3>Image Gallary</h3>
                     <div className="galaImg">
                         {
-                            imgs?.map((img,index)=><img src={img} alt={"photo"+index} />)
+                            imgs?.map((img,index)=><img src={img} alt={"photo"+index} key={`photo+${index}`} />)
                         }
                     </div>
                 </div>
 
-                <Link to="/contact"><button className='wrkBtn'>Start The Project</button></Link>
+                <Link href="/contact"><button className='wrkBtn'>Start The Project</button></Link>
             </div>
         </div>
     );

@@ -25,32 +25,33 @@ box-shadow: 0 .3rem .3rem .3rem rgba(255, 217, 0, 0.717);background: none;
 }
 
 .member{
-    width: 17rem;
+    width: 14rem;
     background: rgba(0, 0, 0, 0.863);
     margin: .5rem;
     border-radius: .6rem;
     text-align: center;
     padding: .5rem;
+    transition: all 1s ease-in-out;
 }
 .member:hover{
-  background-color: rgb(10, 114, 174)
+    transform: scale(1.1);
+  background-color: rgba(1, 28, 43, 0.164)
 }
 
 .member img{
-    width: 30%;
+    width: 7rem;
     height: 7rem;
     border-radius: 50%;
-    
+    border: 3px solid #079ac7;
+    transform: scale(.8);
 }
 
 .member h3{
-    font-size: 1.3rem;
-    font-style: italic;
+    font-size: 1rem;
 }
 
-.member h4{
-    font-size: .9rem;
-    font-style: italic;
+.member p{
+    font-size: .8rem;
     color: rgb(255, 1, 196);
     font-stretch: ultra-condensed;
 

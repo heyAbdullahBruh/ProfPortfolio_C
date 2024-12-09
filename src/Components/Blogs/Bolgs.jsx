@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+"use client";
+import  { useEffect, useState } from 'react';
 import './blogs.css';
-import blogData from '../../app/blogData';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
+import blogData from '@/db/blogData';
 const Bolgs = () => {
 
     const [blogs,setBlogs]=useState([]);
@@ -10,7 +11,7 @@ const Bolgs = () => {
         setBlogs(blogData);
     },[])
 //   let body ='lorem dsgfn jzjgi ojo ijifoj gioji odjfg nvdfijgiffd'
-//     const bodySl=body.slice(1,50);
+//     const bodySl=body.slice(0,50);
 
     const travel =blogs.filter(trav=> trav.uID ==='trv23');
     const motiv =blogs.filter(motiv=> motiv.uID ==='motiv11');
@@ -76,12 +77,12 @@ const Bolgs = () => {
                     {
                         blogs?.map((blog)=>{
                             const {title,image,body}=blog;
-                            const bodySl=body.slice(1,60);
+                            const bodySl=body.slice(0,60);
                             return (
                                 <section key={blog.id} className='blogSec' >
                                     <img src={image} alt="all" />
                                     <h3 >{title}</h3>
-                                    <p >{bodySl}....<Link to={`/blogDetail/${blog.id}`} className='seeMore'>See Detail </Link></p>
+                                    <p >{bodySl}....<Link href={`/blogDetail/${blog.id}`} className='seeMore'>See Detail </Link></p>
                                     
                                 </section>
                             )
@@ -93,12 +94,12 @@ const Bolgs = () => {
                     {
                         code?.map((blog)=>{
                             const {title,image,body}=blog;
-                            const bodySl=body.slice(1,60);
+                            const bodySl=body.slice(0,60);
                             return (
                                 <section key={blog.id} className='blogSec' >
                                     <img src={image} alt="all" />
                                     <h3 >{title}</h3>
-                                    <p >{bodySl}....<Link to={`/blogDetail/${blog.id}`} className='seeMore'>See Detail </Link></p>
+                                    <p >{bodySl}....<Link href={`/blogDetail/${blog.id}`} className='seeMore'>See Detail </Link></p>
                                     
                                 </section>
                             )
@@ -110,12 +111,12 @@ const Bolgs = () => {
                     {
                         travel?.map((blog)=>{
                             const {title,image,body}=blog;
-                            const bodySl=body.slice(1,60);
+                            const bodySl=body.slice(0,60);
                             return (
                                 <section key={blog.id} className='blogSec' >
                                     <img src={image} alt="all" />
                                     <h3 >{title}</h3>
-                                    <p >{bodySl}....<Link to={`/blogDetail/${blog.id}`} className='seeMore'>See Detail </Link></p>
+                                    <p >{bodySl}....<Link href={`/blogDetail/${blog.id}`} className='seeMore'>See Detail </Link></p>
                                     
                                 </section>
                             )
@@ -127,12 +128,12 @@ const Bolgs = () => {
                     {
                         motiv?.map((blog)=>{
                             const {title,image,body}=blog;
-                            const bodySl=body.slice(1,60);
+                            const bodySl=body.slice(0,60);
                             return (
                                 <section key={blog.id} className='blogSec' >
                                     <img src={image} alt="all" />
                                     <h3 >{title}</h3>
-                                    <p >{bodySl}....<Link to={`/blogDetail/${blog.id}`} className='seeMore'>See Detail </Link></p>
+                                    <p >{bodySl}....<Link href={`/blogDetail/${blog.id}`} className='seeMore'>See Detail </Link></p>
                                     
                                 </section>
                             )
@@ -144,12 +145,12 @@ const Bolgs = () => {
                     {
                         art?.map((blog)=>{
                             const {title,image,body}=blog;
-                            const bodySl=body.slice(1,60);
+                            const bodySl=body.slice(0,60);
                             return (
                                 <section key={blog.id} className='blogSec' >
                                     <img src={image} alt="all" />
                                     <h3 >{title}</h3>
-                                    <p >{bodySl}....<Link to={`/blogDetail/${blog.id}`} className='seeMore'>See Detail </Link></p>
+                                    <p >{bodySl}....<Link href={`/blogDetail/${blog.id}`} className='seeMore'>See Detail </Link></p>
                                     
                                 </section>
                             )

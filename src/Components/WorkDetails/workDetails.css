@@ -13,6 +13,11 @@
 }
 .wrkTop button{
     background-color: red;
+    border-radius: 1rem;
+    margin: 0 .4rem;
+    border: none;
+}.wrkTop button:hover{
+    background-color: #ffffff;
 }
 .workHdr span{
 color: gold;
@@ -55,6 +60,19 @@ box-shadow: 0 .3rem .3rem .3rem rgba(255, 217, 0, 0.717);background: none;
     display: grid;
     grid-template-columns: auto auto;
     gap: 0;
+}
+
+.workDSec .wrkBtn{
+    background-color: #059c37;
+    color: #eee;
+    border-radius: 1rem;
+    margin: 0 .4rem;
+    border: none;
+    font-weight: bold;
+    padding: .3rem .6rem;
+}.workDSec .wrkBtn:hover{
+    background-color: #eee;
+    color: #059c37;
 }
 
 @media (max-width:780px) {

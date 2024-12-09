@@ -1,9 +1,9 @@
-import Resume from "@/Components/Resume/Resume";
+import Contact from "@/Components/Contact/Contact";
 
 const page = () => {
     return (
         <>
-            <Resume/>
+            <Contact/>
         </>
     );
 };

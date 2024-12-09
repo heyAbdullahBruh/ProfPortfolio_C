@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+'use client';
+import  { useEffect, useState } from 'react';
 import './work.css';
-import { workData } from '../../app/workData';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
+import { workData } from '@/db/workData';
 const Work = () => {
 
     const [works,setWorks]=useState([]);
@@ -23,7 +24,7 @@ const Work = () => {
                             return <div className="workSec" key={id}>
                                 <img src={thumb} alt={title} />
                                 <p>{title}</p>
-                                <Link to={`/detailsOn/${id}`}>
+                                <Link href={`/workDetails/${id}`}>
                                     <button className='wrkBtn'>SEE DETAILS <FontAwesomeIcon icon={faArrowRightLong}/> </button>
                                 </Link>
                             </div>

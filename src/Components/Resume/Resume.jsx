@@ -1,9 +1,8 @@
-import React from 'react';
+'use client';
 import './resume.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase, faCheck, faCode, faGraduationCap,  } from '@fortawesome/free-solid-svg-icons';
 import { faListAlt } from '@fortawesome/free-regular-svg-icons';
-import image from '../images/me2.jpg'
 const Resume = () => {
     return (
         <div className='resume'>
@@ -136,9 +135,9 @@ const Resume = () => {
                 <h3 className='resumeHdr'> <span>Q</span>uote</h3><hr />
                       <div className="testimoSec">
                             <p>" &nbsp; Transforming ideas into reality with seamless full-stack solutions—where innovation meets functionality to elevate your business to the next level..&nbsp;&nbsp;  "</p>
-                            <img src={image} alt="AbdullahShayed"  style={{border:'3px solid #1E90FF'}}/>
+                            <img src={"https://i.ibb.co.com/CsjTpxr/me2.jpg"} alt="AbdullahShayed"  style={{border:'3px solid #1E90FF'}}/>
                             <h3>Mr. Edward Abdullah</h3>
-                            <span>Full-Stuck Dveloper</span>
+                            <b style={{fontSize:'.7rem'}}>Full-Stuck Dveloper</b>
                       </div>  
                 </div>
 

@@ -256,7 +256,20 @@ font-family: monospace;
 color: rgb(255, 251, 0);
 }
 
+.testimoSec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0;
+}
 
+.testimoSec img{
+    width: 20%;
+    border-radius: 50%;
+    margin: 10px 0;
+}
 
 @media screen and (max-width:580px){
     .eduExp{
