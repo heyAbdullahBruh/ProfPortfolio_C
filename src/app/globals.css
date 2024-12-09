@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap');
+:root{
+    --headingFontFamily: "Domine", serif;
+    --descFontFamily: "Roboto Mono", monospace;
+}
+
+/* *{
+  margin: 0 ;
+  padding: 0 ;
+  box-sizing: border-box;
+  outline: none;
+} */
+ body{
+  scroll-behavior: smooth;
+
+ }
+.App{
+  margin: 0;
+  display: flex;flex-direction: row;justify-content: center;
+  align-items: center;
+  padding: 1.55rem 3.5rem; 
+  overflow: hidden;
+}
+
+h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
+  font-family: var(--headingFontFamily);
+}
+
+p ,li ,a ,td ,strong ,button{
+  font-family: var(--descFontFamily);
+}
+
+nav{
+  width: 50%;
+  max-height: 90vh;
+  margin-bottom: 1rem;
+}
+
+main{
+  width: 50%;max-height: 85vh;
+  background-color: rgba(44, 47, 48, 0.363);
+  overflow-y: scroll;
+  border-bottom-right-radius: .4rem;
+  border-top-right-radius: .4rem;
+  /* margin-top: 3rem; */
+}
+
+@media (min-width:2000px) {
+  nav{
+      width: 40%;
+      max-height: 100vh;
+      margin-bottom: 1rem;
+  }
+  
+  main{
+      width: 60%;
+      max-height: 80vh;
+      background-color: rgba(44, 47, 48, 0.363);
+      overflow-y: scroll;
+      border-bottom-right-radius: .4rem;
+      border-top-right-radius: .4rem;
+      /* margin-top: 3rem; */
+  }
+}
+
+@media screen and (max-width:1150px){
+  
+  .App{
+      flex-direction: column;
+  }
+  nav{
+      width: 100%;padding: 1rem;
+      max-height: 100%;
+  }
+  
+  main{
+      width: 80%;        
+      max-height: 100%;
+      border-radius: 1rem;
+  }
+}
+
+@media screen and (max-width:780px){
+
+  .App{
+      padding: 0; 
+      overflow: scroll;
+  }
+  main{
+      width: 100%;        
+  }
+}
+
+
+
+
+
+::-webkit-scrollbar{
+  width:.5rem;
+  height:.4rem;
+  cursor:move;
+}
+
+::-webkit-scrollbar-thumb{
+  background: rgba(0, 149, 255, 0.996);
+  border-radius:1rem;
+}
+

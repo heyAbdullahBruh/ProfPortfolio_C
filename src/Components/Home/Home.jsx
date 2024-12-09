@@ -1,48 +1,51 @@
-import React from 'react';
-import './Home.css';
-import Typed from 'react-typed';
-import CountUp from 'react-countup';
-import { Link } from 'react-router-dom';
+'use client';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faHandshake } from '@fortawesome/free-solid-svg-icons';
-// import { BackgroundChange } from '../../App';
+import CountUp from 'react-countup';
+import Link from 'next/link';
+import styles from './home.module.css';  // Import the CSS module
+import Typed from '../TypeAnimation/Typed';
 
 const Home = () => {
-    // const [background]=useContext(BackgroundChange);
-    // const {}= useState
     return (
-        <div className='home'>
-            <div className="homeContainer">
-                <div className="intro">
-                    <h2>Hi.! Iam <Typed strings={['Abdullah Shayed <b>-Turning Ideas into Interactive Web Solutions!</b>']} typeSpeed={50}  backSpeed={50}/></h2>
-                    <h4>With 4+ years of experience and expertise in MERANN technologies, I build stunning websites and web apps that deliver results.</h4>
+        <div className={styles.home}>
+            <div className={styles.homeContainer}>
+                <div className={styles.intro}>
+                    <h3>Hi.! I am <Typed strings={['Abdullah Shayed -<Turning Ideas into Interactive Web Solutions!>']} typeSpeed={50} /></h3>
+                    <p>With 4+ years of experience and expertise in MERANN technologies, I build stunning websites and web apps that deliver results.</p>
                 </div>
 
-                <div className="homeSec">
-                    <div className="count1">
-                    <h3><CountUp end={30} duration={1} />+</h3>
-                    <h4>Complete Project</h4>
+                <div className={styles.homeSec}>
+                    <div className={styles.count1}>
+                        <h3><CountUp end={30} duration={1} />+</h3>
+                        <p>Complete Project</p>
                     </div>
-                    <div className="count1">
-                    <h3><CountUp end={25} duration={1} />+</h3>
-                    <h4>Happy Client</h4>
+                    <div className={styles.count1}>
+                        <h3><CountUp end={25} duration={1} />+</h3>
+                        <p>Happy Client</p>
                     </div>
-                    <div className="count1">
-                    <h3><CountUp end={8} duration={1} />+</h3>
-                    <h4>Running Project</h4>
+                    <div className={styles.count1}>
+                        <h3><CountUp end={8} duration={1} />+</h3>
+                        <p>Running Project</p>
                     </div>
-                    <div className="count1">
-                    <h3><CountUp end={10} duration={1} />+</h3>
-                    <h4>Start Project</h4>
+                    <div className={styles.count1}>
+                        <h3><CountUp end={10} duration={1} />+</h3>
+                        <p>Start Project</p>
                     </div>
                 </div>
 
-                <div className="callAct">
-                        
-                        <Link to='/work'> <button className='homeBtn'><FontAwesomeIcon icon={faEye} /> View My Work</button></Link>
-                    <Link to='/contact'> <button className='homeBtn'>Let’s Collaborate! <FontAwesomeIcon icon={faHandshake} /> </button></Link>
+                <div className={styles.callAct}>
+                    <Link href='/work'> 
+                        <button className={styles.homeBtn}>
+                            <FontAwesomeIcon icon={faEye} /> View My Work
+                        </button>
+                    </Link>
+                    <Link href='/contact'> 
+                        <button className={styles.homeBtn}>
+                            Let’s Collaborate! <FontAwesomeIcon icon={faHandshake} />
+                        </button>
+                    </Link>
                 </div>
-                
             </div>
         </div>
     );

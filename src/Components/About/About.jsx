@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 import './about.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faNode, faReact } from '@fortawesome/free-brands-svg-icons';

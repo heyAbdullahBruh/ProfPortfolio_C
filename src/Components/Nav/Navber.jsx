@@ -1,138 +1,85 @@
-import React, { useContext, useState } from 'react';
-import './Navber.css'
-import { Link } from 'react-router-dom';
-import Typed from 'react-typed';
+'use client';
+import styles from './Navber.module.css'; // Import the module CSS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudDownload, faHome, faPhone, faPodcast, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faEye, faListAlt, faMoon, faSun, faUser } from '@fortawesome/free-regular-svg-icons';
-import { BackgroundChange } from '../../App';
-import { faFacebook, faGithub, faInstagramSquare, faLinkedin, faTelegram, faTwitter,  } from '@fortawesome/free-brands-svg-icons';
-import profile from '../images/me.jpg';
+import { faFacebook, faGithub, faInstagramSquare, faLinkedin, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import Link from 'next/link';
+import Typed from '../TypeAnimation/Typed';
 
 const Navber = () => {
 
-    const [background,setBackground]=useContext(BackgroundChange);
-    // console.log(background);
-    const [day,setDay]=useState(false);
-
-     const handleDay= ()=>{
-        setDay(true);
-        setBackground({backgroundColor:'black',color:'#93c7f5'});
-     }
-
-     const handleNight= ()=>{
-        setDay(false);
-        setBackground({backgroundColor:'#93c7f521',color:'black'});
-     }  
-
- 
-
     return (
-        <div className='navber'>
-            <div className="navSec1"> 
-            <div className="navSecUp">
-
-                <div className="sideText">
-                    <img src={profile} alt="" />
-                    <div className="slideHd">
-                    <h5>Abu Sayed</h5>
-                    <h5><Typed
-                         strings={['Web Developer','Front-End Developer','Web Desiner','React Developer','CV Writter','Resume Writter']}
-                         typeSpeed={150}
-                         backSpeed={100}
-                         loop
-                         /></h5>
+        <div className={styles.navber}>
+            <div className={styles.navSec1}>
+                <div className={styles.navSecDwn}>
+                    {[' ', 'about', 'resume', 'work', 'blog', 'contact', 'team'].map((route, idx) => (
+                        <div className={styles.link} key={idx}>
+                            <Link className={styles.navLink} href={`/${route}`}>
+                                <FontAwesomeIcon
+                                    icon={[
+                                        faHome,
+                                        faUser,
+                                        faListAlt,
+                                        faEye,
+                                        faPodcast,
+                                        faPhone,
+                                        faUsers,
+                                    ][idx]}
+                                />
+                                <br />
+                                <span>{route.charAt(0).toUpperCase() + route.slice(1).replace('_', ' ')}</span>
+                            </Link>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className={styles.navSec2}>
+                <div className={styles.backImg}></div>
+                <div className={styles.navSec2Txt}>
+                    <img src={'https://i.ibb.co.com/dLBnBC7/me.jpg'} alt="Profile" />
+                    <h1>Abu Sayed</h1>
+                    <h3>
+                        Expert in{' '}
+                        <Typed
+                            strings={[
+                                'Web Development',
+                                'Front-End Development',
+                                'Backend Development',
+                                'MongoDB',
+                            ]}
+                            typeSpeed={150}
+                            backSpeed={100}
+                            loop
+                        />
+                    </h3>
+                    <div className={styles.socialIcn}>
+                        {[
+                            { href: 'https://github.com/MrAbuSayed', icon: faLinkedin },
+                            { href: 'https://facebook.com/Developer.Sayed.1', icon: faFacebook },
+                            { href: 'https://twitter.com/DeveloperShayed', icon: faTwitter },
+                            { href: 'https://www.instagram.com/developer_sayed/', icon: faInstagramSquare },
+                            { href: 'https://github.com/MrAbuSayed', icon: faGithub },
+                        ].map(({ href, icon }, idx) => (
+                            <Link key={idx} target="_blank" href={href} className={styles.sclLnk}>
+                                <FontAwesomeIcon icon={icon} />
+                            </Link>
+                        ))}
+                    </div>
+                    <div className={styles.navBtn}>
+                        <a href="https://pdflink.to/ab846943/" target="blank">
+                            <button className={styles.contactBtn}>
+                                Download CV &nbsp; <FontAwesomeIcon icon={faCloudDownload} />
+                            </button>
+                        </a>
+                        <Link href="/contact">
+                            <button className={styles.cvBtn}>
+                                Contact Me &nbsp; <FontAwesomeIcon icon={faTelegram} />
+                            </button>
+                        </Link>
                     </div>
                 </div>
-                <div className="backGround">
-                   { day ===true ?<button onClick={handleNight} className="nightBtn"><FontAwesomeIcon icon={faMoon} /></button>  :
-                      <button onClick={handleDay} className=" dayBtn"><FontAwesomeIcon icon={faSun} /></button>
-                    }
-                </div>
             </div>
-                <div className="navSecDwn">
-                <div className="link">
-                    <Link className='navLink'  to={'/home'} >
-                        <FontAwesomeIcon icon={faHome} />
-                        <br />
-                        <span>Home</span>
-                        
-                    </Link>
-                </div>
-                <div className="link">
-                    <Link className='navLink' to={'/about'} >
-                        <FontAwesomeIcon icon={faUser} />
-                        <br />
-                        <span>About</span>
-                        
-                    </Link>
-                </div>
-                <div className="link">
-                    <Link className='navLink' to={'/resume'} >
-                        <FontAwesomeIcon icon={faListAlt} />
-                        <br />
-                        <span>Resume</span>
-                    </Link>
-                </div>
-                <div className="link">
-                    <Link className='navLink' to={'/work'} >
-                        <FontAwesomeIcon icon={faEye} />
-                        <br />
-                        <span>Work</span>
-                    </Link>
-                </div>
-                <div className="link">
-                    <Link className='navLink' to={'/blog'} >
-                        <FontAwesomeIcon icon={faPodcast} />
-                        <br />
-                        <span>Blogs</span>
-                    </Link>
-                </div>
-                <div className="link">
-                    <Link className='navLink' to={'/contact'} >
-                        <FontAwesomeIcon icon={faPhone} />
-                        <br />
-                        <span>Contact</span>
-                    </Link>
-                </div>
-                <div className="link">
-                    <Link className='navLink' to={'/my_team_members'} >
-                        <FontAwesomeIcon icon={faUsers} />
-                        <br />
-                        <span>Team</span>
-                    </Link>
-                </div>
-                </div>
-            </div>
-
-            
-            <div className="navSec2" style={background}>
-                     <div className="backImg">
-                       
-                     </div>
-                     <div className="navSec2Txt" style={background}>
-                        <img src={profile} alt="" />
-                        <h1>Abdullah Shayed</h1>
-                        {/*   Text Changer */}
-                        <h3>Expert in <Typed
-                         strings={['Web Development','Front-End Development','Backend Development','MongoDB']}
-                         typeSpeed={150}
-                         backSpeed={100}
-                         loop
-                         /></h3>
-                         <div className="socialIcn" style={background}>
-                             <Link target='_blank' to='https://github.com/MrAbuSayed' style={background} className="sclLnk"><FontAwesomeIcon icon={faLinkedin} /></Link>
-                             <Link target='_blank' to='https://facebook.com/Developer.Sayed.1' style={background} className="sclLnk"><FontAwesomeIcon icon={faFacebook} /> </Link>
-                             <Link target='_blank' to='https://twitter.com/DeveloperShayed' style={background} className="sclLnk"><FontAwesomeIcon icon={faTwitter} /> </Link>
-                             <Link target='_blank' to='https://www.instagram.com/developer_sayed/' style={background} className="sclLnk"><FontAwesomeIcon icon={faInstagramSquare} /></Link>
-                             <Link target='_blank' to='https://github.com/MrAbuSayed' style={background} className="sclLnk"><FontAwesomeIcon icon={faGithub} /></Link>
-                         </div>
-                         <div className="navBtn">
-                            <a href='https://pdflink.to/ab846943/' target='blank'><button style={background} className="contactBtn">Download CV &nbsp;  <FontAwesomeIcon icon={faCloudDownload} /></button></a>
-                            <Link to='/contact'> <button style={background} className="cvBtn">Contact Me &nbsp;  <FontAwesomeIcon icon={faTelegram} /></button></Link>
-                         </div>
-                     </div>
-             </div>
         </div>
     );
 };
