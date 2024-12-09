@@ -14,13 +14,7 @@
   margin: 0 ;
   padding: 0 ;
  }
-.App{
-  margin: 0;
-  display: flex;flex-direction: row;justify-content: center;
-  align-items: center;
-  padding: 1.55rem 3.5rem; 
-  overflow: hidden;
-}
+
 
 h1 ,h2 ,h3 ,h4 ,h5 ,h6 {
   font-family: var(--headingFontFamily);
@@ -34,6 +28,17 @@ button{
     cursor: pointer;
     transition: all .4s ease-in-out;
 }
+
+
+.App{
+  margin: 0;
+  display: flex;flex-direction: row;justify-content: center;
+  align-items: center;
+  padding: 1.55rem 3.5rem; 
+  overflow: hidden;
+}
+
+
 nav{
   width: 50%;
   max-height: 90vh;

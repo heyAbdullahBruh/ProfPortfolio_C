@@ -2,7 +2,7 @@
 .workDetail .workHdr{
     font-size: 1.3rem;
     font-weight: bold;
-    font-family:monospace;
+    
     margin: 1rem;
     padding: 1rem;
 }
@@ -37,12 +37,10 @@ box-shadow: 0 .3rem .3rem .3rem rgba(255, 217, 0, 0.717);background: none;
 .workDSec h3{
     text-align: center;
     /* font-size: 1.1rem; */
-    font-family: 'Courier New', Courier, monospace;
     margin: 1rem 0;
 }
 .workDSec p{
     font-size: 1rem;
-    font-family: 'Courier New', Courier, monospace;
     padding: 1rem;
 }
 

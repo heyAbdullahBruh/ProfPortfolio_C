@@ -1,7 +1,6 @@
 .resume .resumeHdr{
     font-size: 1.3rem;
     font-weight: bold;
-    font-family:monospace;
     margin: 1rem;
     padding: 1rem;
 }
@@ -69,7 +68,7 @@ font-weight: bold;margin: 1rem;
 
 .ex1 i, p{
     font-size: 1rem;
-    font-family: monospace;
+
     opacity: .8;
     margin: .3rem;
 }
@@ -82,7 +81,7 @@ font-weight: bold;margin: 1rem;
     background: none;
     border: none;font-size: 1rem;
     color: gold;
-    font-weight: 700;font-family: monospace;
+    font-weight: 700
 }
 .title{
     display: flex;flex-direction: row;
@@ -124,7 +123,7 @@ font-weight: bold;margin: 1rem;
 
 .edu1  p{
     font-size: 1rem;
-    font-family: monospace;
+
     opacity: .8;
     margin: .6rem;
 }
@@ -135,13 +134,13 @@ font-weight: bold;margin: 1rem;
 .edu1 h2{
     color: teal;
     font-size: 1.1rem;
-    font-family: monospace;
+
 }
 .edu1 button{
     background: none;
     border: none;font-size: 1rem;
     color: gold;
-    font-weight: 700;font-family: monospace;
+    font-weight: 700
 }
 
 .skillCont{
@@ -242,14 +241,12 @@ font-weight: bold;margin: 1rem;
 .H1{
     font-size: 1.2rem;
     font-weight: bold;
-    font-family:monospace;
     margin: 1rem;
     color: rgb(255, 197, 51);
 }
 .knowleg p{
 margin: 1rem;
 font-size: 1.1rem;
-font-family: monospace;
 }
 
 .knowleg p .kIco{
@@ -270,6 +267,15 @@ color: rgb(255, 251, 0);
     border-radius: 50%;
     margin: 10px 0;
 }
+
+@media (min-width:1930px) {
+    .skillCont{
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+}
+
 
 @media screen and (max-width:580px){
     .eduExp{

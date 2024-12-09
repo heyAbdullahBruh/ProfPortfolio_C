@@ -1,5 +1,5 @@
 'use client';
-import styles from './Navber.module.css'; // Import the module CSS
+import styles from './navber.module.css'; // Import the module CSS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudDownload, faHome, faPhone, faPodcast, faUsers } from '@fortawesome/free-solid-svg-icons';
 import { faEye, faListAlt, faUser } from '@fortawesome/free-regular-svg-icons';
