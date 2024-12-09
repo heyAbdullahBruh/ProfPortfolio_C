@@ -2,8 +2,8 @@
 import styles from './Navber.module.css'; // Import the module CSS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudDownload, faHome, faPhone, faPodcast, faUsers } from '@fortawesome/free-solid-svg-icons';
-import { faEye, faListAlt, faMoon, faSun, faUser } from '@fortawesome/free-regular-svg-icons';
-import { faFacebook, faGithub, faInstagramSquare, faLinkedin, faTelegram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faEye, faListAlt, faUser } from '@fortawesome/free-regular-svg-icons';
+import { faFacebook, faGithub, faInstagramSquare, faLinkedin, faTelegram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
 import Typed from '../TypeAnimation/Typed';
 
@@ -55,11 +55,11 @@ const Navber = () => {
                     </h3>
                     <div className={styles.socialIcn}>
                         {[
-                            { href: 'https://github.com/MrAbuSayed', icon: faLinkedin },
-                            { href: 'https://facebook.com/Developer.Sayed.1', icon: faFacebook },
-                            { href: 'https://twitter.com/DeveloperShayed', icon: faTwitter },
-                            { href: 'https://www.instagram.com/developer_sayed/', icon: faInstagramSquare },
-                            { href: 'https://github.com/MrAbuSayed', icon: faGithub },
+                            { href: 'https://www.linkedin.com/in/heyabdullahbro', icon: faLinkedin },
+                            { href: 'https://facebook.com/Mr.Pie0', icon: faFacebook },
+                            { href: 'https://x.com/MrPieX', icon: faXTwitter },
+                            { href: 'https://www.instagram.com/Mr.1Pie/', icon: faInstagramSquare },
+                            { href: 'https://github.com/heyabdullahbruh', icon: faGithub },
                         ].map(({ href, icon }, idx) => (
                             <Link key={idx} target="_blank" href={href} className={styles.sclLnk}>
                                 <FontAwesomeIcon icon={icon} />
