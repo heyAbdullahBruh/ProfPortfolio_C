@@ -1,19 +1,60 @@
 "use client";
 import  { useState } from 'react';
 import './contact.css';
+import Popup from '../popup/popup';
 
 const Contact = () => {
 
-  const [form, setFrom] = useState({});
+    const [popupMsg,setPopupmsg]=useState({
+        type:true,
+        message:'',
+        trigger:false,
+     });
+
+  const [data, setData] = useState({
+    name:'',
+    mail:'',
+    teleId:'',
+    subject:'',
+    message:''
+  });
 
    const fromHandler=(e)=>{
-    setFrom({...form,[e.target.name]:e.target.value})
+    setData({...data,[e.target.name]:e.target.value})
    };
 
  const handleMessage=(e)=>{
  e.preventDefault();
-   console.log(form);
- };
+    fetch('/api/client/sendMsg',{
+        method:"POST",
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({
+            name:data.name,
+            mail:data.mail,
+            teleId:data.teleId,
+            subject:data.subject,
+            message:data.message
+        }),
+    }).then(res=>res.json())
+    .then((res)=>{
+        if (res.success===true) {
+            setPopupmsg({message:res.message,trigger:true,type:true});
+        } else {
+            setPopupmsg({message:res.message,trigger:true,type:false});
+        }
+    }).catch(err=>console.log(err))
+    .finally(()=>setData({
+        name:'',
+        mail:'',
+        teleId:'',
+        subject:'',
+        message:''
+      })
+    );
+    setTimeout(() => setPopupmsg({trigger:false}), 8000);
+};
 
 
     return (
@@ -35,25 +76,25 @@ const Contact = () => {
                     <h3 className='cntcHdr'> <span>C</span>ontact From</h3><hr />
                     <form onSubmit={handleMessage}   className="FromC">
 
-                        <input type="text" name="name"  placeholder='Your Name' required onChange={fromHandler} />
+                        <input type="text" name="name" value={data.name}  placeholder='Your Name/*' required onChange={fromHandler} />
 
-                         <input type="email" name="email"  placeholder='Your Email' required onChange={fromHandler} />
+                         <input type="email" name="mail" value={data.mail}  placeholder='Your Email/*' required onChange={fromHandler} />
                             
-                        <input type='text' name="telegram" id="teleId" placeholder='@Your Telegram Username/Number' required onChange={fromHandler}/>
+                        <input type='text' name="teleId" value={data.teleId} id="teleId" placeholder='@Your Telegram Username/Number/*' required onChange={fromHandler}/>
 
-                        <input type="text" name="subject" id="subject" placeholder='Write a subject' required onChange={fromHandler}/>
+                        <input type="text" name="subject" value={data.subject} id="subject" placeholder='Write a subject/*' required onChange={fromHandler}/>
 
-                        <textarea name="message" id="message" placeholder='Your Message' onChange={fromHandler}></textarea>
+                        <textarea name="message" id="message" value={data.message} placeholder='Your Message/*' onChange={fromHandler}></textarea>
 
                         <div className="Fbtn">
-                            <button type="submit">Send @Mail</button>
+                            <button type="submit">Send Message</button>
                         </div>
                        
                     </form>
                 </div>
             </div>
 
-
+            <Popup trigger={popupMsg.trigger} message={popupMsg.message} type={popupMsg.type}/>
         </div>
     );
 };

@@ -1,0 +1,51 @@
+.detailsContainer {
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 1rem;
+    padding: 1rem;
+  }
+
+  .detailsSec{
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    opacity: .8;
+  }
+  
+  .detailsContainer h2 {
+    margin-bottom: 20px;
+  }
+  
+  .detailsContainer p {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+  
+  .detailsContainer p strong {
+    border-bottom: 1px solid #eee;
+    padding: .1rem 0;
+}
+
+.detailAct{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: .2rem;
+}
+
+.detailAct button{
+    border: none ;
+    background-color: rgb(189, 2, 2);
+    cursor: pointer;
+    font-weight:  bold;
+    font-size: 1rem;
+}.detailAct button:hover{
+    background-color: rgb(253, 253, 253);
+}
+
+.detailAct a button{
+    background-color: cadetblue;
+}
