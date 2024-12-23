@@ -11,6 +11,8 @@ const Contact = () => {
         trigger:false,
      });
 
+     const [loading,setLoading] =useState(false);
+
   const [data, setData] = useState({
     name:'',
     mail:'',
@@ -24,6 +26,7 @@ const Contact = () => {
    };
 
  const handleMessage=(e)=>{
+    setLoading(true);
  e.preventDefault();
     fetch('/api/client/sendMsg',{
         method:"POST",
@@ -33,7 +36,7 @@ const Contact = () => {
         body:JSON.stringify({
             name:data.name,
             mail:data.mail,
-            teleId:data.teleId,
+            teleId:data.teleId?.split(' ').join(''),
             subject:data.subject,
             message:data.message
         }),
@@ -45,13 +48,16 @@ const Contact = () => {
             setPopupmsg({message:res.message,trigger:true,type:false});
         }
     }).catch(err=>console.log(err))
-    .finally(()=>setData({
-        name:'',
-        mail:'',
-        teleId:'',
-        subject:'',
-        message:''
-      })
+    .finally(()=>{
+            setData({
+                name:'',
+                mail:'',
+                teleId:'',
+                subject:'',
+                message:''
+            });
+            setLoading(false);
+        }
     );
     setTimeout(() => setPopupmsg({trigger:false}), 8000);
 };
@@ -72,26 +78,42 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="contactFrom">
-                    <h3 className='cntcHdr'> <span>C</span>ontact From</h3><hr />
-                    <form onSubmit={handleMessage}   className="FromC">
-
-                        <input type="text" name="name" value={data.name}  placeholder='Your Name/*' required onChange={fromHandler} />
-
-                         <input type="email" name="mail" value={data.mail}  placeholder='Your Email/*' required onChange={fromHandler} />
-                            
-                        <input type='text' name="teleId" value={data.teleId} id="teleId" placeholder='@Your Telegram Username/Number/*' required onChange={fromHandler}/>
-
-                        <input type="text" name="subject" value={data.subject} id="subject" placeholder='Write a subject/*' required onChange={fromHandler}/>
-
-                        <textarea name="message" id="message" value={data.message} placeholder='Your Message/*' onChange={fromHandler}></textarea>
-
-                        <div className="Fbtn">
-                            <button type="submit">Send Message</button>
+                {
+                    loading ? 
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
+                        <div style={{ textAlign: 'center' }}>
+                        {/* <h1>Loading...</h1> */}
+                        <div style={{ border: '4px solid #f3f3f3', borderTop: '4px solid #3498db', borderRadius: '50%', width: '50px', height: '50px', animation: 'spin 1s linear infinite' }} />
+                        <style jsx>{`
+                            @keyframes spin {
+                            0% { transform: rotate(0deg); }
+                            100% { transform: rotate(360deg); }
+                            }
+                        `}</style>
                         </div>
-                       
-                    </form>
-                </div>
+                    </div>
+                    : 
+                    <div className="contactFrom">
+                        <h3 className='cntcHdr'> <span>C</span>ontact From</h3><hr />
+                        <form onSubmit={handleMessage}   className="FromC">
+
+                            <input type="text" name="name" value={data.name}  placeholder='Your Name/*' required onChange={fromHandler} />
+
+                            <input type="email" name="mail" value={data.mail}  placeholder='Your Email/*' required onChange={fromHandler} />
+                                
+                            <input type='text' name="teleId" value={data.teleId} id="teleId" placeholder='@Your Telegram Username/Number/*' required onChange={fromHandler}/>
+
+                            <input type="text" name="subject" value={data.subject} id="subject" placeholder='Write a subject/*' required onChange={fromHandler}/>
+
+                            <textarea name="message" id="message" value={data.message} placeholder='Your Message/*' onChange={fromHandler}></textarea>
+
+                            <div className="Fbtn">
+                                <button type="submit">Send Message</button>
+                            </div>
+                        
+                        </form>
+                    </div>
+                }
             </div>
 
             <Popup trigger={popupMsg.trigger} message={popupMsg.message} type={popupMsg.type}/>
