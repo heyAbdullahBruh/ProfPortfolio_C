@@ -23,8 +23,8 @@ const Team = () => {
                         <p>Web Developer</p>
                         <div className="teamIco"> 
                              <Link href='https://www.facebook.com/tarikulrifat.39' className='teamLink' ><FontAwesomeIcon icon={faFacebook} /> </Link>
-                             <Link href='https://www.instagram.com/tarekulrifat/' className='teamLink' ><FontAwesomeIcon icon={faGithub} /> </Link>
-                             <Link href='https://github.com/tarekul42' className='teamLink' ><FontAwesomeIcon icon={faInstagram} /></Link>
+                             <Link href='https://github.com/tarekul42 ' className='teamLink' ><FontAwesomeIcon icon={faGithub} /> </Link>
+                             <Link href='https://www.instagram.com/tarekulrifat/' className='teamLink' ><FontAwesomeIcon icon={faInstagram} /></Link>
                         </div>
                     </div>
                     
