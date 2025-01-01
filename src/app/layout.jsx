@@ -3,7 +3,7 @@ import Navber from "@/Components/Nav/Navber";
 
 export const metadata = {
   title: "Abudllah Shayed",
-  description: "The site is  Abdullah Shayed portfolio",
+  description: "Explore the portfolio of Abdullah Shayed, a skilled MERN stack developer with 4 years of experience. Showcasing expertise in web development, creative projects, and problem-solving. Let's build something amazing together!",
 };
 
 // {
