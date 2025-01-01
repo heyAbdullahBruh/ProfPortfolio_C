@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import styles from './nav.module.css'; // Import the module CSS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudDownload, faHome, faPhone, faPodcast, faUsers } from '@fortawesome/free-solid-svg-icons';
@@ -6,14 +6,19 @@ import { faEye, faListAlt, faUser } from '@fortawesome/free-regular-svg-icons';
 import { faFacebook, faGithub, faInstagramSquare, faLinkedin, faTelegram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
 import Typed from '../TypeAnimation/Typed';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const Navber = () => {
 
-    const thisLocation=location.pathname.split('/')[1];
+     
+    // const thisLocation=window.location.pathname.split('/')[1];
  
-    const [routeId ,setRoute ]=useState(thisLocation);
+    const [routeId ,setRoute ]=useState(' ');
 
+    useEffect(() => {
+        const path = window.location.pathname.split("/")[1];
+        setRoute(path);
+      }, []);
     // console.log(thisLocation);
 
     const handleRoute = ()=>{
@@ -61,7 +66,7 @@ const Navber = () => {
                 <div className={styles.backImg}></div>
                 <div className={styles.navSec2Txt}>
                     <img src={'https://i.ibb.co.com/DgNTJpJ/me.png'} alt="Profile" />
-                    <h1>Abu Sayed</h1>
+                    <h1>Abdullah Sayed</h1>
                     <h3>
                         Expert in{' '}
                         <Typed

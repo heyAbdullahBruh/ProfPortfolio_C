@@ -117,7 +117,7 @@ footer p{
 ::-webkit-scrollbar{
   width:.5rem;
   height:.4rem;
-  cursor:move;
+  cursor:pointer;
 }
 
 ::-webkit-scrollbar-thumb{
