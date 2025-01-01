@@ -153,9 +153,11 @@ font-weight: bold;margin: 1rem;
 
 .skill1,
 .skill2{
-    display: flex;justify-content: center;
+    display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
+    width: 21rem;
 }
 
 .code,.knowleg{
@@ -170,8 +172,14 @@ font-weight: bold;margin: 1rem;
 
 .codeCont,
 .knowCont{
-    padding: 1rem;
+    padding: .5rem;
 }
+
+.codeCont p{
+    font-size: .9rem;
+    color: rgb(2, 255, 171);
+}
+
 
 .codeHdr span{
     font-size: 1.6rem;
@@ -227,16 +235,23 @@ font-weight: bold;margin: 1rem;
 }
 .cercle6 span{
     height: 100%;
-    width: 66%;
+    width: 75%;
     border-radius: 1rem;
     background-color: rgb(13, 84, 109);
 }
 .cercle7 span{
     height: 100%;
-    width: 60%;
+    width: 70%;
     border-radius: 1rem;
     background-color: rgb(13, 84, 109);
 }
+.cercle8 span{
+    height: 100%;
+    width: 80%;
+    border-radius: 1rem;
+    background-color: rgb(13, 84, 109);
+}
+
 
 .H1{
     font-size: 1.2rem;
@@ -246,7 +261,8 @@ font-weight: bold;margin: 1rem;
 }
 .knowleg p{
 margin: 1rem;
-font-size: 1.1rem;
+font-size: .9rem;
+color: rgb(2, 255, 171);
 }
 
 .knowleg p .kIco{

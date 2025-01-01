@@ -54,6 +54,16 @@ main{
   /* margin-top: 3rem; */
 }
 
+footer{
+  width: 50%;
+  margin: 1rem auto;
+}
+
+footer p{
+  border-radius: 1rem;
+}
+
+
 @media (min-width:2000px) {
   nav{
       width: 40%;

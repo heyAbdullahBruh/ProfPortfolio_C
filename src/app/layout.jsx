@@ -31,7 +31,9 @@ export default function RootLayout({ children }) {
               </main>
             </div>
 
-            <p style={{textAlign:'center',fontSize:'1rem',background:'white',color:'black',fontWeight:'bold'}}>&copy;Copyright By Developer Shayed .All Right Reserve (2021-{year}) </p>
+            <footer>
+              <p style={{textAlign:'center',fontSize:'1rem',background:'white',color:'black',fontWeight:'bold'}}>&copy;Copyright By Developer Shayed .All Right Reserve (2021-{year}) </p>
+            </footer>
         </body>
     </html>
   );

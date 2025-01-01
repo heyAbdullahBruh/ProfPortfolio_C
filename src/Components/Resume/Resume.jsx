@@ -73,36 +73,36 @@ const Resume = () => {
                             </div>
                             <div className="codeCont">
                                 <div className="code1">
-                                    <h1 className='H1'>Javascript--80%</h1 >
+                                    <p className='H1'>Javascript--80%</p >
                                     <div className="cercle1"><span></span></div>
                                 </div>
                                 <div className="code2">
-                                   <h1 className='H1'>React--75%</h1 >
+                                   <p className='H1'>React--75%</p >
                                   <div className="cercle2"><span></span></div>
                                 </div>
                                 <div className="code3">
-                                    <h1 className='H1'>NextJS--70%</h1 >
+                                    <p className='H1'>NextJS--70%</p >
                                    <div className="cercle3"><span></span></div>
                                 </div>
                                 <div className="code4"> 
-                                    <h1 className='H1'>Html/CSS--86%</h1 >
+                                    <p className='H1'>Html & CSS--86%</p >
                                    <div className="cercle4"><span></span></div>
                                 </div>
                                 <div className="code5"> 
-                                    <h1 className='H1'>Bootstarp--73%</h1 >
+                                    <p className='H1'>MUI--73%</p >
                                    <div className="cercle5"><span></span></div>
                                 </div>
                                 <div className="code6"> 
-                                    <h1 className='H1'>Tailwind CSS--66%</h1 >
+                                    <p className='H1'>MongoDB--76%</p >
                                    <div className="cercle6"><span></span></div>
                                 </div>
                                 <div className="code7"> 
-                                    <h1 className='H1'>Jquery--60%</h1 >
+                                    <p className='H1'>Node.js --70%</p >
                                    <div className="cercle7"><span></span></div>
                                 </div>
                                 <div className="code8"> 
-                                    <h1 className='H1'>SASS--86%</h1 >
-                                   <div className="cercle4"><span></span></div>
+                                    <p className='H1'>Express.js--75%</p >
+                                   <div className="cercle8"><span></span></div>
                                 </div>
                             </div>
                         </div>
@@ -117,13 +117,13 @@ const Resume = () => {
                             <p><FontAwesomeIcon className='kIco' icon={faCheck}/>&nbsp; E-Commerce Website</p>
                             <p><FontAwesomeIcon className='kIco' icon={faCheck}/>&nbsp; Website hosting </p>
                             <p><FontAwesomeIcon className='kIco' icon={faCheck}/>&nbsp; Front-End Development</p>
+                            <p><FontAwesomeIcon className='kIco' icon={faCheck}/>&nbsp; Back-End Development</p>
+                            <p><FontAwesomeIcon className='kIco' icon={faCheck}/>&nbsp; Database Management</p>
                             <p><FontAwesomeIcon className='kIco' icon={faCheck}/>&nbsp; Hosting Installation </p>
                             <p><FontAwesomeIcon className='kIco' icon={faCheck}/>&nbsp; SEO Optimize</p>
-                            <p><FontAwesomeIcon className='kIco' icon={faCheck}/>&nbsp; Responsive and mobile-ready</p>
-                            <p><FontAwesomeIcon className='kIco' icon={faCheck}/>&nbsp; HTML, CSS, jQuery </p>
-                            <p><FontAwesomeIcon className='kIco' icon={faCheck}/>&nbsp; Bootstarp/Tailwind CSS </p>
-                            <p><FontAwesomeIcon className='kIco' icon={faCheck}/>&nbsp; Search engine marketing </p>
-                            <p><FontAwesomeIcon className='kIco' icon={faCheck}/>&nbsp; Search engine Optmizing </p>
+                            <p><FontAwesomeIcon className='kIco' icon={faCheck}/>&nbsp; Responsive and mobile Friendly</p>
+                            <p><FontAwesomeIcon className='kIco' icon={faCheck}/>&nbsp; MERN Stack </p>
+                            <p><FontAwesomeIcon className='kIco' icon={faCheck}/>&nbsp; Clean code </p>
                             </div>
                         </div>
                     </div>

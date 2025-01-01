@@ -23,14 +23,15 @@ box-shadow: 0 .3rem .3rem .3rem rgba(255, 217, 0, 0.717);background: none;
 }
 .about .dsc2{
     display: flex;justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
-.dsc2 p{
-    font-size: 1.1rem;
+.dsc2 .child p{
+    font-size: .9rem;
 }
 
-.about .child:nth-child(2){
-    margin: 0 0 0 2rem;
+.dsc2 .child{
+    margin: .1rem;
+    width: 50%;
 }
 
 .about .service1{

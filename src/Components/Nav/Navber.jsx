@@ -6,16 +6,39 @@ import { faEye, faListAlt, faUser } from '@fortawesome/free-regular-svg-icons';
 import { faFacebook, faGithub, faInstagramSquare, faLinkedin, faTelegram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import Link from 'next/link';
 import Typed from '../TypeAnimation/Typed';
+import { useState } from 'react';
 
 const Navber = () => {
+
+    const thisLocation=location.pathname.split('/')[1];
+ 
+    const [routeId ,setRoute ]=useState(thisLocation);
+
+    // console.log(thisLocation);
+
+    const handleRoute = ()=>{
+        switch (routeId) {
+            case ' ': return ' ';
+            case 'about': return 'about';
+            case 'resume': return 'resume';
+            case 'work': return 'work';
+            case 'blog': return 'blog';
+            case 'contact': return 'contact';
+            case 'team': return 'team';
+            default: return routeId;
+        };
+    };
+
+    // console.log(handleRoute());
+
 
     return (
         <div className={styles.navber}>
             <div className={styles.navSec1}>
                 <div className={styles.navSecDwn}>
                     {[' ', 'about', 'resume', 'work', 'blog', 'contact', 'team'].map((route, idx) => (
-                        <div className={styles.link} key={idx}>
-                            <Link className={styles.navLink} href={`/${route}`}>
+                        <div className={`${styles.link} ${route===handleRoute() ? styles.activeBorder : ''}`} key={idx}>
+                            <Link className={`${styles.navLink} ${route===handleRoute() ? styles.active : ''}`} href={`/${route}`} onClick={()=> setRoute(route)}>
                                 <FontAwesomeIcon
                                     icon={[
                                         faHome,
@@ -37,7 +60,7 @@ const Navber = () => {
             <div className={styles.navSec2}>
                 <div className={styles.backImg}></div>
                 <div className={styles.navSec2Txt}>
-                    <img src={'https://i.ibb.co.com/dLBnBC7/me.jpg'} alt="Profile" />
+                    <img src={'https://i.ibb.co.com/DgNTJpJ/me.png'} alt="Profile" />
                     <h1>Abu Sayed</h1>
                     <h3>
                         Expert in{' '}
@@ -60,6 +83,7 @@ const Navber = () => {
                             { href: 'https://x.com/MrPieX', icon: faXTwitter },
                             { href: 'https://www.instagram.com/Mr.1Pie/', icon: faInstagramSquare },
                             { href: 'https://github.com/heyabdullahbruh', icon: faGithub },
+                            { href: 'https://github.com/MrPieee', icon: faGithub },
                         ].map(({ href, icon }, idx) => (
                             <Link key={idx} target="_blank" href={href} className={styles.sclLnk}>
                                 <FontAwesomeIcon icon={icon} />
@@ -69,7 +93,7 @@ const Navber = () => {
                     <div className={styles.navBtn}>
                         <a href="https://pdflink.to/ab846943/" target="blank">
                             <button className={styles.contactBtn}>
-                                Download CV &nbsp; <FontAwesomeIcon icon={faCloudDownload} />
+                                Resume &nbsp; <FontAwesomeIcon icon={faCloudDownload} />
                             </button>
                         </a>
                         <Link href="/contact">

@@ -25,12 +25,12 @@ const About = () => {
                     </div>
                     <div className="dsc2">
                         <div className="child">
-                            <p>Name . . . . Abdullah Sayed</p>
-                            <p>Age . . . . 19years</p>
+                            <p>Name . . Abdullah Sayed</p>
+                            <p>Wrok . . Programming</p>
                         </div>
                         <div className="child">
-                             <p>RESIDENCE . . . . Banglasdesh</p>
-                            <p>ADDRESS . . . . Mirpur, Dhaka, Banglasdesh</p>
+                             <p>RESIDENCE . . Banglasdesh</p>
+                            <p>ADDRESS . . Mirpur, Dhaka, Banglasdesh</p>
                         </div>
                     </div>
                 </div>

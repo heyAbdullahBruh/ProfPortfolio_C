@@ -18,20 +18,21 @@ const Team = () => {
            <h3 className='teamHdr'> <span><FontAwesomeIcon icon={faUsers} /> M</span>y Team Members</h3><hr />
             <div className="teamCont">
                     <div className="member">
-                        <img src="https://i.postimg.cc/pXCXJm9B/tarek.jpg" alt="tarek" />
+                        <img src="https://i.ibb.co.com/8KFntJN/tarek.jpg" alt="tarek" />
                         <h3>Tarequl Islam Rifat</h3>
                         <p>Web Developer</p>
                         <div className="teamIco"> 
-                             <Link href='https://www.facebook.com/tarikulrifat.39' className='teamLink' ><FontAwesomeIcon icon={faFacebook} /> </Link>
+                             {/* <Link href='https://www.facebook.com/tarikulrifat.39' className='teamLink' ><FontAwesomeIcon icon={faFacebook} /> </Link> */}
+                             <Link href='https://www.facebook.com/tarekul.1001r' className='teamLink' ><FontAwesomeIcon icon={faFacebook} /> </Link>
                              <Link href='https://github.com/tarekul42 ' className='teamLink' ><FontAwesomeIcon icon={faGithub} /> </Link>
                              <Link href='https://www.instagram.com/tarekulrifat/' className='teamLink' ><FontAwesomeIcon icon={faInstagram} /></Link>
                         </div>
                     </div>
                     
                     <div className="member">
-                        <img src="https://i.postimg.cc/BbH65prY/simmy.jpg" alt="Orpannita" />
-                        <h3>Orpannita</h3>
-                        <p>Backend Developer</p>
+                        <img src="https://i.ibb.co.com/vZG28db/user.webp" alt="Simmey" />
+                        <h3>Simmey Sheikh</h3>
+                        <p>Front-End Developer</p>
                         <div className="teamIco"> 
                              <Link href='' className='teamLink' ><FontAwesomeIcon icon={faFacebook} /> </Link>
                              <Link href='' className='teamLink' ><FontAwesomeIcon icon={faGithub} /> </Link>

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './comment.module.css'; // Include the styles as a module
+import { Box, Typography, Button, Avatar } from '@mui/material';
 
 const CommentSlider = () => {
   const comments = [
@@ -42,39 +43,94 @@ const CommentSlider = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? comments.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
+  // Auto-carousel with delay
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % comments.length);
+    }, 3000); // 5-second delay
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, []);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? comments.length - 1 : prevIndex - 1));
   };
 
-  const goToNext = () => {
-    const isLastSlide = currentIndex === comments.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % comments.length);
   };
 
   return (
-    <div className={styles.sliderContainer}>
-      <button className={styles.navButton} onClick={goToPrevious}>
-        &#9664; {/* Left Arrow */}
-      </button>
-      <div className={`${styles.slide} ${styles.transition}`}>
-        <p className={styles.cmntText}>
-          " &nbsp; {comments[currentIndex].text} &nbsp;&nbsp; "
-        </p>
-        <img
-          src={comments[currentIndex].image}
-          alt={comments[currentIndex].name}
-          className={styles.profilePic}
-        />
-        <h3>{comments[currentIndex].name}</h3>
-        <p className={styles.role}>{comments[currentIndex].role}</p>
-      </div>
-      <button className={styles.navButton} onClick={goToNext}>
-        &#9654; {/* Right Arrow */}
-      </button>
-    </div>
+   <section className={styles.sliderContainer}>
+     <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '450px',
+        width: '100%',
+        overflow: 'hidden',
+        position: 'relative',
+        bgcolor: '#0000005e',
+        borderRadius: '8px',
+        px: 2,
+        transition: 'transform 0.5s ease-in-out', // Smooth animation
+      }}
+    >
+      {/* Avatar */}
+      <Avatar
+        src={comments[currentIndex].image}
+        alt={comments[currentIndex].name}
+        sx={{
+          width: 100,
+          height: 100,
+          mb: 2,
+          animation: 'fadeIn 1s', // Animation
+        }}
+      />
+
+      {/* Text */}
+      <Typography
+        variant="p"
+        sx={{
+          textAlign: 'center',
+          fontStyle: 'italic',
+          color: '#9ac0c2c2',
+          px: 3,
+          mb: 2,
+          animation: 'fadeIn 1s', // Animation
+        }}
+      >
+        "{comments[currentIndex].text}"
+      </Typography>
+
+      {/* Name and Role */}
+      <Typography variant="h6" sx={{ fontWeight: 'bold', textAlign: 'center' }}>
+        {comments[currentIndex].name}
+      </Typography>
+      <Typography variant="body2" sx={{ color: 'gray', textAlign: 'center' }}>
+        {comments[currentIndex].role}
+      </Typography>
+
+      {/* Buttons */}
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          position: 'absolute',
+          bottom: '20px',
+          width: '80%',
+        }}
+      >
+        <Button variant="contained" onClick={handlePrev}>
+        &#10094;
+        </Button>
+        <Button variant="contained" onClick={handleNext}>
+        &#10095;
+        </Button>
+      </Box>
+    </Box>
+   </section>
   );
 };
 
