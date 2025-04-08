@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react";
 import styles from './msg.module.css';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTelegram } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 
 
@@ -26,7 +24,7 @@ const Message = () => {
                 <tr>
                     <th>Name</th>
                     <th>Mail</th>
-                    <th>Telegram</th>
+                    {/* <th>Telegram</th> */}
                     <th>Subject</th>
                     <th>View</th>
                 </tr>
@@ -36,12 +34,12 @@ const Message = () => {
                     <tr key={row._id}>
                         <td>{row.name?.slice(0,3)}..</td>
                         <td><Link href={`mailto:${row.mail}`} style={{textDecoration:'none',color:'white'}}>{row.mail?.slice(0,15)}..</Link></td>
-                        <td style={{textAlign:'center'}}>
+                        {/* <td style={{textAlign:'center'}}>
                             {
                                 row.teleId?.length > 1 ? <Link href={`https://t.me/${row.teleId}`}style={{color:'white',fontSize:'2rem'}}><FontAwesomeIcon icon={faTelegram}/></Link> :
                                 <p>none</p>
                             }
-                        </td>
+                        </td> */}
                         <td>{row.subject?.slice(0,8)}..</td>
                         <td>
                             <Link href={`/me/all/message/${row._id}`} style={{textDecoration:'none',fontSize:'2rem'}}>👁️</Link>

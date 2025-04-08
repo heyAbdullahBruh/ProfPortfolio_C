@@ -7,13 +7,13 @@ export const POST = async(req)=>{
 
     try {
         await CONNECT_DB();
-        const {name,mail,teleId, subject, message}=await req.json();
+        const {name,mail, subject, message}=await req.json();
         
         if (name && mail && subject && message) {
             const newMsg = new Message({
                 name,
                 mail,
-                teleId, 
+                // teleId, 
                 subject, 
                 message
             });

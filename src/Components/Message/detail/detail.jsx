@@ -15,7 +15,7 @@ const DetailMsg = ({id}) => {
         }).catch((err)=>console.log(err))
     },[id]);
 
-    const {name,mail,teleId, subject, message}=msg;
+    const {name,mail, subject, message}=msg;
 
     const deleteMsg =(mId)=>{
         fetch(`/api/me/msg/${mId}`,{method:'DELETE'}).then(res=>res.json())
@@ -28,7 +28,7 @@ const DetailMsg = ({id}) => {
             <div className={styles.detailsSec}>
                 <h3>Details for {name}</h3>
                 <p><strong>Email:</strong> {mail}</p>
-                <p><strong>Tele ID:</strong> {teleId}</p>
+                {/* <p><strong>Tele ID:</strong> {teleId}</p> */}
                 <p><strong>Subject:</strong> {subject}</p>
                 <p><strong>Description:</strong> {message}</p>
             </div>
