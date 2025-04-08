@@ -65,7 +65,7 @@ const Navber = () => {
             <div className={styles.navSec2}>
                 <div className={styles.backImg}></div>
                 <div className={styles.navSec2Txt}>
-                    <img src={'https://i.ibb.co.com/DgNTJpJ/me.png'} alt="Profile" />
+                    <img src={'https://i.ibb.co.com/LdGCMWyd/mrAbu.jpg'} alt="Profile" />
                     <h1>Abdullah Sayed</h1>
                     <h3>
                         Expert in{' '}
