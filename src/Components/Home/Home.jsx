@@ -12,7 +12,7 @@ const Home = () => {
             <div className={styles.homeContainer}>
                 <div className={styles.intro}>
                     <h3>Hi.! I am <Typed strings={['Abdullah Shayed -<Turning Ideas into Interactive Web Solutions!>']} typeSpeed={50} /></h3>
-                    <p>With 3+ years of experience and expertise in MERANN technologies, I build stunning websites and web apps that deliver results.</p>
+                    <p>With 3+ years of experience and expertise in MERN technologies, I build stunning websites and web apps that deliver results.</p>
                 </div>
 
                 <div className={styles.homeSec}>
