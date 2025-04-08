@@ -15,7 +15,7 @@ const About = () => {
                 <div className="myDsc">
                     <div className="dsc1">
                         <h3>Hello! I’m Abdullah Shayed.</h3>
-                        <p>I am a passionate web developer with 4 years of experience in building modern, scalable, and user-friendly web applications. My expertise lies in MEARNN technologies—MongoDB, Express, React, Node.js, and Next.js—allowing me to deliver efficient and cutting-edge solutions for businesses across various industries.
+                        <p>I am a passionate web developer with 3 years of experience in building modern, scalable, and user-friendly web applications. My expertise lies in MEARN technologies—MongoDB, Express, React, Node.js, and Next.js—allowing me to deliver efficient and cutting-edge solutions for businesses across various industries.
                         <br />
                         <br />
                         What sets me apart is my commitment to bridging functionality with aesthetics. I believe every web application should not only perform seamlessly but also provide an exceptional user experience.
