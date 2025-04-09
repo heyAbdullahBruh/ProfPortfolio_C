@@ -99,7 +99,9 @@
 }
 
 .navSec2Txt img {
-    width: 12rem;
+    width: 13rem;
+    height: 13rem;
+    object-fit:cover;
     border-radius: 50%;
     box-shadow: 0 4px 10px #1E90FF, 0 6px 15px #035fbb;
     margin-top: -5rem;
